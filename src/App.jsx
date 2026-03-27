@@ -26,7 +26,7 @@ function App() {
           <div className="px-8 md:px-12 pb-10 relative">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between">
               
-              {/* SISI KIRI: Foto & Identitas */}
+              {/* SISI KIRI*/}
               <div className="flex flex-col">
                 <div className="relative -mt-20 md:-mt-24 mb-6 inline-block">
                   <img 
@@ -52,7 +52,7 @@ function App() {
                 </div>
               </div>
 
-              {/* SISI KANAN: Elemen Pengisi ( */}
+              {/* SISI KANAN*/}
               <div className="mt-8 md:mt-0 flex flex-col items-start md:items-end gap-3">
                 {/* Badge Status */}
                 <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full">
@@ -73,7 +73,7 @@ function App() {
           </div>
         </div>
 
-        {/* CONTENT GRID (Tetap sama namun lebih bersih) */}
+        {/* CONTENT */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-2 space-y-6">
             <section className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
