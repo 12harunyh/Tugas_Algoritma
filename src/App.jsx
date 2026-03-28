@@ -1,6 +1,9 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ProfileFarras from './ProfileFarras'; // Memanggil file profilmu
 
-function App() {
+// Ini adalah komponen profil Dummy bawaan temanmu
+function DummyProfile() {
   const profileData = {
     namaLengkap: "Dummy Dummy",
     kelas: "- - -",
@@ -19,7 +22,7 @@ function App() {
         
         {/* HERO SECTION */}
         <div className="bg-white rounded-t-2xl shadow-sm border border-slate-100 overflow-hidden mb-6 relative">
-          <div className="h-48 md:h-60 bg-linear-to-r from-slate-900 to-slate-700 w-full relative">
+          <div className="h-48 md:h-60 bg-gradient-to-r from-slate-900 to-slate-700 w-full relative">
             <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMCAwaDQwdjQwSDBWMHptMjAgMjBoMjB2MjBIMjBWMjB6TTAgMjBoMjB2MjBIMFYyMHoyMCAwaDIwdjIwSDIwVjB6Ii8+PC9nPjwvZz48L3N2Zz4=')]"></div>
           </div>
 
@@ -54,13 +57,10 @@ function App() {
 
               {/* SISI KANAN*/}
               <div className="mt-8 md:mt-0 flex flex-col items-start md:items-end gap-3">
-                {/* Badge Status */}
                 <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full">
                   <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
                   <span className="text-blue-700 text-sm font-bold uppercase tracking-wider">{profileData.status}</span>
                 </div>
-                
-                {/* Email Display */}
                 <div className="flex items-center gap-2 text-slate-500 bg-slate-50 px-4 py-2 rounded-xl border border-slate-100">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -139,6 +139,21 @@ function App() {
         </footer>
       </div>
     </div>
+  );
+}
+
+// Ini App utama yang bertugas mengatur URL
+function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* Halaman utama (localhost:5173) akan menampilkan profil Dummy temanmu */}
+        <Route path="/" element={<DummyProfile />} />
+        
+        {/* Ini URL khusus untuk profilmu! */}
+        <Route path="/farras-muhammad" element={<ProfileFarras />} />
+      </Routes>
+    </Router>
   );
 }
 
