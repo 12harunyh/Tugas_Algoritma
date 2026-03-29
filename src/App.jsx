@@ -1,18 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ProfileFarras from './ProfileFarras'; // Memanggil file profilmu
 
-// Ini adalah komponen profil Dummy bawaan temanmu
-function DummyProfile() {
+function App() {
   const profileData = {
-    namaLengkap: "Dummy Dummy",
-    kelas: "- - -",
-    prodi: "-",
-    fakultas: "-",
+    namaLengkap: "Dehan Ibnu Haqqi",
+    kelas: "",
+    prodi: "Teknologi Informasi",
+    fakultas: "Vokasi",
     domisili: "Malang, Jawa Timur",
     fotoUrl: "https://imgs.search.brave.com/mDztPWayQWWrIPAy2Hm_FNfDjDVgayj73RTnUIZ15L0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE1Lzg0LzQz/LzM2MF9GXzIxNTg0/NDMyNV90dFg5WWlJ/SXllYVI3TmU2RWFM/TGpNQW15NEd2UEM2/OS5qcGc",
-    tentangDiri: "Halo! Saya Dummy.",
-    email: "example@gmail,com", 
+    tentangDiri: "Halo! Saya Dehan Ibnu Haqqi.",
+    email: "dehanibnu08@gmail,com", 
     status: "Open to Work" 
   };
 
@@ -22,7 +19,7 @@ function DummyProfile() {
         
         {/* HERO SECTION */}
         <div className="bg-white rounded-t-2xl shadow-sm border border-slate-100 overflow-hidden mb-6 relative">
-          <div className="h-48 md:h-60 bg-gradient-to-r from-slate-900 to-slate-700 w-full relative">
+          <div className="h-48 md:h-60 bg-linear-to-r from-slate-900 to-slate-700 w-full relative">
             <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMCAwaDQwdjQwSDBWMHptMjAgMjBoMjB2MjBIMjBWMjB6TTAgMjBoMjB2MjBIMFYyMHoyMCAwaDIwdjIwSDIwVjB6Ii8+PC9nPjwvZz48L3N2Zz4=')]"></div>
           </div>
 
@@ -43,7 +40,7 @@ function DummyProfile() {
                     {profileData.namaLengkap}
                   </h1>
                   <p className="text-xl md:text-2xl text-slate-700 font-medium">
-                    Future Web3 Developer
+                    Future Data Scientist
                   </p>
                   <div className="flex items-center gap-1.5 mt-2 text-slate-500 font-medium">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,10 +54,13 @@ function DummyProfile() {
 
               {/* SISI KANAN*/}
               <div className="mt-8 md:mt-0 flex flex-col items-start md:items-end gap-3">
+                {/* Badge Status */}
                 <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full">
                   <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
                   <span className="text-blue-700 text-sm font-bold uppercase tracking-wider">{profileData.status}</span>
                 </div>
+                
+                {/* Email Display */}
                 <div className="flex items-center gap-2 text-slate-500 bg-slate-50 px-4 py-2 rounded-xl border border-slate-100">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -107,10 +107,10 @@ function DummyProfile() {
               <h3 className="text-xl font-bold text-slate-950 mb-6">Pendidikan</h3>
               <div className="space-y-5">
                 {[
-                  { label: "Institusi", value: profileData.kelas.split(' - ')[0] },
-                  { label: "Program Studi", value: profileData.prodi },
-                  { label: "Fakultas", value: profileData.fakultas },
-                  { label: "Kelas", value: profileData.kelas.split(' - ')[1] }
+                  { label: "Institusi X", value: profileData.kelas.split(' - ')[0] },
+                  { label: "Program Studi Teknologi Informasi", value: profileData.prodi },
+                  { label: "Fakultas Vokasi", value: profileData.fakultas },
+                  { label: "Kelas 2", value: profileData.kelas.split(' - ')[1] }
                 ].map((item, i) => (
                   <div key={i} className="group">
                     <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold mb-1">{item.label}</p>
@@ -139,21 +139,6 @@ function DummyProfile() {
         </footer>
       </div>
     </div>
-  );
-}
-
-// Ini App utama yang bertugas mengatur URL
-function App() {
-  return (
-    <Router>
-      <Routes>
-        {/* Halaman utama (localhost:5173) akan menampilkan profil Dummy temanmu */}
-        <Route path="/" element={<DummyProfile />} />
-        
-        {/* Ini URL khusus untuk profilmu! */}
-        <Route path="/farras-muhammad" element={<ProfileFarras />} />
-      </Routes>
-    </Router>
   );
 }
 
