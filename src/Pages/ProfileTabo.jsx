@@ -1,45 +1,37 @@
 import React from 'react';
-import FotoSaya from './assets/farras.jpeg'; 
 
-function ProfileFarras() {
-  // Ganti data di bawah ini dengan data dirimu yang asli!
+function ProfileAbdullah() {
   const profileData = {
-    namaLengkap: "Farras Muhammad",
-    tagline: "Future Web3 Developer",
-    domisili: "Bogor, Bogor",
-    // Gunakan link gambarmu sendiri nanti. Ini link sementara agar pasti muncul.
-    // Gunakan link gambarmu sendiri nanti. Ini link sementara agar pasti muncul.
-    fotoUrl: FotoSaya,
-    tentangDiri: "Halo! Saya Farras, seorang mahasiswa yang sangat antusias dalam dunia Frontend Development dan Desain UI/UX. Saya memiliki passion kuat dalam mengubah ide kompleks menjadi antarmuka pengguna yang sederhana, intuitif, dan estetis. Saat ini, saya aktif mempelajari ekosistem JavaScript modern, khususnya React.js dan Tailwind CSS. Bagi saya, coding bukan hanya tentang menulis instruksi, tetapi tentang memecahkan masalah dengan solusi kreatif.",
+    namaLengkap: "Abdullah Tabo",
+    tagline: "IT Student | Aspiring UI/UX Designer",
+    domisili: "Malang, Jawa Timur",
+    fotoUrl: "https://ui-avatars.com/api/?name=Abdullah+Tabo&background=0f172a&color=fff&size=256",
+    tentangDiri: "Halo! Saya Abdullah, seorang mahasiswa Teknologi Informasi di Universitas Brawijaya dengan minat mendalam pada desain antarmuka (UI) dan pengalaman pengguna (UX). Saya senang menggabungkan logika pemrograman yang saya pelajari di IT dengan estetika desain untuk menciptakan solusi digital yang fungsional dan menarik. Selain fokus pada desain, saya juga memiliki dasar yang kuat dalam pengembangan web dan analisis data.",
     institusi: "Universitas Brawijaya",
-    prodi: "Vokasi",
-    fakultas: "Teknologi Informasi",
-    email: "farras@example.com",
-    status: "OPEN FOR COLLABORATION"
+    prodi: "Teknologi Informasi",
+    fakultas: "Ilmu Komputer", 
+    email: "abdullahtabo03@gmail.com",
+    status: "OPEN FOR COLLABORATION",
+    skills: ["UI/UX Design", "Figma", "Web Development", "JavaScript", "Data Analysis"]
   };
 
   return (
     <div className="min-h-screen bg-slate-100 py-10 px-4 sm:px-6 lg:px-8 font-sans">
-      {/* Container Utama */}
       <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
         
-        {/* Banner Atas (Header Biru Gelap bergaris-garis ala Harun) */}
+        {/* Header/Banner */}
         <div className="h-40 sm:h-52 w-full bg-slate-800 relative overflow-hidden">
-          {/* Efek Garis-garis (Stripes) di background */}
           <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 10px, #ffffff 10px, #ffffff 11px)' }}></div>
         </div>
 
-        {/* Bagian Profil Info */}
+        {/* Profile Info */}
         <div className="px-6 sm:px-10 pb-8 relative">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end">
-            
-            {/* Sisi Kiri: Foto, Nama, Tagline */}
             <div className="flex flex-col">
-              {/* Foto Profil (Tarik ke atas supaya nabrak header) */}
               <div className="-mt-16 sm:-mt-20 mb-4 z-10">
                 <img 
                   src={profileData.fotoUrl} 
-                  alt="Foto Profil" 
+                  alt="Foto Profil Abdullah" 
                   className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-white shadow-lg object-cover bg-white"
                 />
               </div>
@@ -58,7 +50,6 @@ function ProfileFarras() {
               </div>
             </div>
 
-            {/* Sisi Kanan: Status & Email */}
             <div className="mt-6 md:mt-0 flex flex-col gap-3 md:items-end w-full md:w-auto">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-200 bg-blue-50">
                 <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
@@ -71,50 +62,55 @@ function ProfileFarras() {
                 {profileData.email}
               </div>
             </div>
-
           </div>
         </div>
 
         <hr className="border-slate-100" />
 
-        {/* Bagian Konten Bawah (Tentang Diri & Pendidikan) */}
+        {/* Content Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 sm:px-10 py-10 bg-white">
-          
-          {/* Kolom Kiri: Tentang Diri (Makan 2 kolom) */}
-          <div className="md:col-span-2 space-y-4">
-            <h2 className="text-xl font-bold text-slate-900">Tentang Diri</h2>
-            <p className="text-slate-600 leading-relaxed text-justify">
-              {profileData.tentangDiri}
-            </p>
+          <div className="md:col-span-2 space-y-6">
+            <div>
+              <h2 className="text-xl font-bold text-slate-900 mb-3">Tentang Diri</h2>
+              <p className="text-slate-600 leading-relaxed text-justify">
+                {profileData.tentangDiri}
+              </p>
+            </div>
+            
+            {/* Tambahan Bagian Skills agar lebih UI/UX friendly */}
+            <div>
+              <h2 className="text-xl font-bold text-slate-900 mb-3">Keahlian</h2>
+              <div className="flex flex-wrap gap-2">
+                {profileData.skills.map((skill, index) => (
+                  <span key={index} className="px-3 py-1 bg-slate-800 text-white text-xs rounded-md">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* Kolom Kanan: Pendidikan (Makan 1 kolom) */}
           <div className="space-y-6">
             <h2 className="text-xl font-bold text-slate-900">Pendidikan</h2>
-            
             <div className="space-y-4">
               <div>
                 <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">Institusi</p>
                 <p className="text-slate-800 font-medium">{profileData.institusi}</p>
               </div>
-              
               <div>
                 <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">Program Studi</p>
                 <p className="text-slate-800 font-medium">{profileData.prodi}</p>
               </div>
-              
               <div>
                 <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">Fakultas</p>
                 <p className="text-slate-800 font-medium">{profileData.fakultas}</p>
               </div>
             </div>
-            
           </div>
-
         </div>
       </div>
     </div>
   );
 }
 
-export default ProfileFarras;
+export default ProfileAbdullah;
