@@ -2,14 +2,14 @@ import React from 'react';
 
 function App() {
   const profileData = {
-    namaLengkap: "Dummy Dummy",
-    kelas: "- - -",
-    prodi: "-",
-    fakultas: "-",
+    namaLengkap: "Dehan Ibnu Haqqi",
+    kelas: "",
+    prodi: "Teknologi Informasi",
+    fakultas: "Vokasi",
     domisili: "Malang, Jawa Timur",
     fotoUrl: "https://imgs.search.brave.com/mDztPWayQWWrIPAy2Hm_FNfDjDVgayj73RTnUIZ15L0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE1Lzg0LzQz/LzM2MF9GXzIxNTg0/NDMyNV90dFg5WWlJ/SXllYVI3TmU2RWFM/TGpNQW15NEd2UEM2/OS5qcGc",
-    tentangDiri: "Halo! Saya Dummy.",
-    email: "example@gmail,com", 
+    tentangDiri: "Halo! Saya Dehan Ibnu Haqqi.",
+    email: "dehanibnu08@gmail,com", 
     status: "Open to Work" 
   };
 
@@ -40,7 +40,7 @@ function App() {
                     {profileData.namaLengkap}
                   </h1>
                   <p className="text-xl md:text-2xl text-slate-700 font-medium">
-                    Future Web3 Developer
+                    Future Data Scientist
                   </p>
                   <div className="flex items-center gap-1.5 mt-2 text-slate-500 font-medium">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,10 +107,10 @@ function App() {
               <h3 className="text-xl font-bold text-slate-950 mb-6">Pendidikan</h3>
               <div className="space-y-5">
                 {[
-                  { label: "Institusi", value: profileData.kelas.split(' - ')[0] },
-                  { label: "Program Studi", value: profileData.prodi },
-                  { label: "Fakultas", value: profileData.fakultas },
-                  { label: "Kelas", value: profileData.kelas.split(' - ')[1] }
+                  { label: "Institusi X", value: profileData.kelas.split(' - ')[0] },
+                  { label: "Program Studi Teknologi Informasi", value: profileData.prodi },
+                  { label: "Fakultas Vokasi", value: profileData.fakultas },
+                  { label: "Kelas 2", value: profileData.kelas.split(' - ')[1] }
                 ].map((item, i) => (
                   <div key={i} className="group">
                     <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold mb-1">{item.label}</p>
