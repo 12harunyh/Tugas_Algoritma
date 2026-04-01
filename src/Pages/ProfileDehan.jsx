@@ -4,12 +4,13 @@ import React from 'react';
 function ProfileDehan() {
   const profileData = {
     namaLengkap: "Dehan Ibnu Haqqi",
-    kelas: "",
+    kelas: "T2B",
     prodi: "Teknologi Informasi",
     fakultas: "Vokasi",
+    institusi: "Universitas Brawijaya",
     domisili: "Malang, Jawa Timur",
-    fotoUrl: "https://imgs.search.brave.com/mDztPWayQWWrIPAy2Hm_FNfDjDVgayj73RTnUIZ15L0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE1Lzg0LzQz/LzM2MF9GXzIxNTg0/NDMyNV90dFg5WWlJ/SXllYVI3TmU2RWFM/TGpNQW15NEd2UEM2/OS5qcGc",
-    tentangDiri: "Halo! Saya Dehan Ibnu Haqqi.",
+    fotoUrl: "src/assets/dehan.jpg.jpeg",
+    tentangDiri: "Halo! Saya Dehan Ibnu Haqqi,Saya adalah seorang Data Scientist yang berfokus pada transformasi data mentah menjadi wawasan strategis yang terukur. Dengan latar belakang kuat dalam statistik inferensial dan pengembangan model basis data, saya mahir dalam mengolah dataset kompleks menggunakan Java, Python, dan SQL untuk mendukung pengambilan keputusan berbasis data. ​Saya memiliki ketertarikan khusus pada analisis teknikal dan optimasi sistem, di mana saya menggabungkan ketelitian pemrosesan data dengan pemahaman mendalam tentang pola tren pasar. Melalui pendekatan yang terstruktur dalam ERD dan Data Flow Diagram, saya berkomitmen untuk membangun solusi data yang tidak hanya akurat secara matematis, tetapi juga efisien secara arsitektur dan fungsional bagi kebutuhan bisnis..",
     email: "dehanibnu08@gmail,com", 
     status: "Open to Work" 
   };
@@ -108,10 +109,10 @@ function ProfileDehan() {
               <h3 className="text-xl font-bold text-slate-950 mb-6">Pendidikan</h3>
               <div className="space-y-5">
                 {[
-                  { label: "Institusi X", value: profileData.kelas.split(' - ')[0] },
-                  { label: "Program Studi Teknologi Informasi", value: profileData.prodi },
-                  { label: "Fakultas Vokasi", value: profileData.fakultas },
-                  { label: "Kelas 2", value: profileData.kelas.split(' - ')[1] }
+                  { label: "Institusi ", value: profileData.institusi},
+                  { label: "Program Studi", value: profileData.prodi },
+                  { label: "Fakultas", value: profileData.fakultas },
+                  { label: "Kelas ", value: profileData.kelas}
                 ].map((item, i) => (
                   <div key={i} className="group">
                     <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold mb-1">{item.label}</p>

@@ -2,13 +2,10 @@ import React from 'react';
 import FotoSaya from "../assets/farras.jpeg";
 
 function ProfileFarras() {
-  // Ganti data di bawah ini dengan data dirimu yang asli!
   const profileData = {
     namaLengkap: "Farras Muhammad",
     tagline: "Future Web3 Developer",
     domisili: "Bogor, Bogor",
-    // Gunakan link gambarmu sendiri nanti. Ini link sementara agar pasti muncul.
-    // Gunakan link gambarmu sendiri nanti. Ini link sementara agar pasti muncul.
     fotoUrl: FotoSaya,
     tentangDiri: "Halo! Saya Farras, seorang mahasiswa yang sangat antusias dalam dunia Frontend Development dan Desain UI/UX. Saya memiliki passion kuat dalam mengubah ide kompleks menjadi antarmuka pengguna yang sederhana, intuitif, dan estetis. Saat ini, saya aktif mempelajari ekosistem JavaScript modern, khususnya React.js dan Tailwind CSS. Bagi saya, coding bukan hanya tentang menulis instruksi, tetapi tentang memecahkan masalah dengan solusi kreatif.",
     institusi: "Universitas Brawijaya",
@@ -20,22 +17,15 @@ function ProfileFarras() {
 
   return (
     <div className="min-h-screen bg-slate-100 py-10 px-4 sm:px-6 lg:px-8 font-sans">
-      {/* Container Utama */}
       <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
-        
-        {/* Banner Atas (Header Biru Gelap bergaris-garis ala Harun) */}
         <div className="h-40 sm:h-52 w-full bg-slate-800 relative overflow-hidden">
-          {/* Efek Garis-garis (Stripes) di background */}
           <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 10px, #ffffff 10px, #ffffff 11px)' }}></div>
         </div>
 
-        {/* Bagian Profil Info */}
+        {/*Profil Info */}
         <div className="px-6 sm:px-10 pb-8 relative">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end">
-            
-            {/* Sisi Kiri: Foto, Nama, Tagline */}
             <div className="flex flex-col">
-              {/* Foto Profil (Tarik ke atas supaya nabrak header) */}
               <div className="-mt-16 sm:-mt-20 mb-4 z-10">
                 <img 
                   src={profileData.fotoUrl} 
@@ -58,7 +48,6 @@ function ProfileFarras() {
               </div>
             </div>
 
-            {/* Sisi Kanan: Status & Email */}
             <div className="mt-6 md:mt-0 flex flex-col gap-3 md:items-end w-full md:w-auto">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-200 bg-blue-50">
                 <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
@@ -77,10 +66,8 @@ function ProfileFarras() {
 
         <hr className="border-slate-100" />
 
-        {/* Bagian Konten Bawah (Tentang Diri & Pendidikan) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 sm:px-10 py-10 bg-white">
           
-          {/* Kolom Kiri: Tentang Diri (Makan 2 kolom) */}
           <div className="md:col-span-2 space-y-4">
             <h2 className="text-xl font-bold text-slate-900">Tentang Diri</h2>
             <p className="text-slate-600 leading-relaxed text-justify">
@@ -88,7 +75,6 @@ function ProfileFarras() {
             </p>
           </div>
 
-          {/* Kolom Kanan: Pendidikan (Makan 1 kolom) */}
           <div className="space-y-6">
             <h2 className="text-xl font-bold text-slate-900">Pendidikan</h2>
             

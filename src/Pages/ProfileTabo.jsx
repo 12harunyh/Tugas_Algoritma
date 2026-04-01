@@ -77,7 +77,6 @@ function ProfileAbdullah() {
               </p>
             </div>
             
-            {/* Tambahan Bagian Skills agar lebih UI/UX friendly */}
             <div>
               <h2 className="text-xl font-bold text-slate-900 mb-3">Keahlian</h2>
               <div className="flex flex-wrap gap-2">
